@@ -50,9 +50,9 @@ class BfhlApplicationTests {
         BfhlResponseDto response = bfhlService.processData(request);
 
         assertThat(response.isSuccess()).isTrue();
-        assertThat(response.getUserId()).isEqualTo("sameer_shekhar_14042004");
-        assertThat(response.getEmail()).isEqualTo("sameer.shekhar.btech2023@sitpune.edu.in");
-        assertThat(response.getRollNumber()).isEqualTo("23070122191");
+        assertThat(response.getUserId()).isEqualTo("Tanisha_Sirohi");
+        assertThat(response.getEmail()).isEqualTo("Tanisha.sirohi.btech2023@sitpune.edu.in");
+        assertThat(response.getRollNumber()).isEqualTo("23070122218");
 
         assertThat(response.getOddNumbers()).containsExactly("1");
         assertThat(response.getEvenNumbers()).containsExactlyInAnyOrder("334", "4");
@@ -162,9 +162,9 @@ class BfhlApplicationTests {
                         .content(requestJson))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.is_success").value(true))
-                .andExpect(jsonPath("$.user_id").value("sameer_shekhar_14042004"))
-                .andExpect(jsonPath("$.email").value("sameer.shekhar.btech2023@sitpune.edu.in"))
-                .andExpect(jsonPath("$.roll_number").value("23070122191"))
+                .andExpect(jsonPath("$.user_id").value("Tanisha_Sirohi"))
+                .andExpect(jsonPath("$.email").value("Tanisha.sirohi.btech2023@sitpune.edu.in"))
+                .andExpect(jsonPath("$.roll_number").value("23070122218"))
                 .andExpect(jsonPath("$.sum").value("339"))
                 .andExpect(jsonPath("$.concat_string").value("Ra"));
     }
